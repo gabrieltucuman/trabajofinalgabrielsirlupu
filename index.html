@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="autor" content="Gabriel Sirlupu">
+        <meta name="descriction" content="web personal con datos de contactos e informacion sobre pasatiempos">
+        <meta name="keywords" content="cv,mis datos,programacion,diseñoweb,javascript,bootstrap,html">
+
+        <!--link a CSS-->
+        <link href="micss.css" rel="stylesheet">
+
+        <!--link para bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        
+        <title>Gabriel Sirlupu - Desarrollo Web</title>
+
+        <!--link para los iconos de bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="icon" type="image/x-icon" href="imagenes/person.svg"></link>
+
+        <!--tipos de letras-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@500&family=Righteous&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@200&family=Quicksand:wght@500&family=Righteous&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--mi barra de navegacion-->
+        <ul class="navbar nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="javascript:abrir()">Un poco de mi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fotos.html" target="_blank">Algunas fotos</a>
+            </li>
+           
+        </ul>
+
+        <!--cento de la pagina-->
+        <section id="inicio" class="principal align-items-stretch">
+            <div class="principal-uno d-flex flex-column justify-content-center align-items-center">
+                <img class="mi-foto" src="imagenes/yo.jpg" alt="mi foto en la montaña">
+                <h1 class="sobre-mi">Hola, soy Gabriel Sirlupu</h1>
+                <h2 class="texto-sec">Esta es mi pagina personal, aqui encontraras mi formacion, algunos de mis trabajos y las paginas que sigo para continuar aprendiendo.</h2>
+            </div>
+        </section>
+
+        <!--tabla con imagenes-->
+        <section class="tabla-imagenes">
+            <div class="container text-center">
+                <div class="row">
+                    <!--mi formacion-->
+                    <div class="columna col-12 col-md-4">
+                        <p>Mis Estudios</p>
+                        <a href="#estudios">
+                            <img class="imagen" src="imagenes/formacion.png" alt="mi formacion">
+                        </a>
+                    </div>
+                    <!--diseño web-->
+                    <div class="columna col-12 col-md-4">
+                        <p>Desarrollo Web</p>
+                        <a href="#diseñoweb">
+                            <img class="imagen" src="imagenes/diseñoweb.jpg" alt="diseño web">
+                        </a>
+                    </div>
+                    <!--programacion-->
+                    <div class="columna col-12 col-md-4">
+                        <p>Programacion</p>
+                        <a href="#programacion">
+                            <img class="imagen" src="imagenes/programacion.jpg" alt="programcacion">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+
+        <!--contactos-->
+        
+            <div class="contactame">
+                <a href="javascript:abrirwp()">
+                    <i class="bi bi-whatsapp" ></i>
+                </a>
+
+                <a href="http://www.instagram.com" title="Visita mi Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="mailto:gabrielsirlupuescudero2012@gmailcom" Title="Mandame un email" >
+                    <i class="bi bi-envelope-at"></i>
+                </a>
+
+                <!--script ventana emergente-->
+                <div class="wp" id="miwp">
+                    <p>
+                    <img src="imagenes/micelqr.svg">
+                    </p>
+                    <a href=javascript:cerrarwp()>
+                        <i class="bi bi-x-circle-fill"></i>
+                    </a>
+                </div>
+
+                <script>
+                    function abrirwp(){
+                        document.getElementById("miwp").style.display="block";
+                    } 
+                    function cerrarwp(){
+                        document.getElementById("miwp").style.display="none";
+                    }
+                </script>
+
+                <style>
+                    .wp{
+                        position: absolute;
+                        width: 150px;
+                        height: 150px;
+                        left: 50%;
+                        top:50%;
+                        display: none;
+                    }
+                </style>
+            </div>
+        </section>
+
+        <!--mis estudios-->
+        <section class="desarrollo">
+            <div id="estudios" class="estudios desarrollo-gral">
+                <h3 class="subtitulos">Mis estudios...</h3>
+                <p>
+                    Para comenzar puedo decirte que soy Lic. en gestion de RR.HH, antes de eso estudie y me recibi
+                    de Analista de Sistemas, de ahi que nace esta pasion por lo que es la programacion y el diseño web.<br>
+                    Mi trabajo actual esta relacionado con tareas administrativas y si bien tengo que usar bastante la 
+                    informatica para realizar mis actividades lamentablemente no esta relacionado ni con 
+                    el diseño o la programacion, lo que no quita que esta pasion vaya creciendo dia a dia y mi afan por 
+                    aprender siga adelante.<br> Esto mismo sucede con los RRHH, siempre estoy leyendo, asistiendo a webinars y 
+                    todo aquello que me permita estar actualizado y me de herramientas para sumar conocimiento. <br>
+                    Pienso que cuando se trabaja con personas siempre se enriquece mas nuestra vida ya que nos nutrimos de las experiencias
+                    de otros y me gusta pensar que la otra parte tambien saca algo positivo para su vida. 
+                    De eso se trata, dar y recibir, ayudar, colaborar y pasar por este mundo haciendo todo el bien que
+                    este a nuestro alcance y si no podemos hacer nada, por lo menos no molestemos. <br><br>
+                    Te lo resumo asi:<br><br><b>
+                    Lic. en Gestion de RRHH (Universidad Blas Pascal).<br>
+                    Analista de Sistemas (Inst. Integral de Computacion - Titulo Terciario).<br>
+                    Paquete Office (mayores conocimientos en Excel, Access y Word).<br>
+                    Informatica en gral (inst de sistemas operativos, redes, inst. impresoras).</b><br>
+                    <a href="#inicio" class="inicio">
+                        <i class="bi bi-house"></i>
+                    </a>
+                </p>
+            </div>
+
+            <div id="diseñoweb" class="diseño-web desarrollo-gral">
+                <h3 class="subtitulos">Desarrollo Web...</h3>
+                <p>
+                    Esta es la parte que mas me apasiona, lo que mas me gusta de todo este universo
+                    informatico. <br>
+                    Comence con los viejos y conocidos Dreamweaver, Flash, Photoshop haciendo pruebas
+                    de como combinar lo que a mi criterio era la base para realizar una pagina, tengo
+                    que admitir que en no tuve buenos resultados y no obtenia lo que tenia en mente. 
+                    Ademas no sabia muy bien por donde comenzar y me resultaba todo bastante complicado<br>
+                    Despues de un tiempo de intentar e intentar, porque tengo que confesar que esa es mi
+                    arma secreta... la paciencia y la fuerza de voluntar... me ordene y comence desde cero 
+                    con HTML, CSS y javascript, por suerte encontre muchos grandes profesores en Youtube 
+                    que me ayudaron en el proceso de aprendizaje. <br>
+                    Como soy de navegar mucho, vi que el gobierno estaba lanzando cursos de programacion 
+                    y diseño entonces no lo dude y dije..."esta es la mia, aqui me anoto de una" y es por 
+                    eso que estoy hacienso este trabajo final. <br><br>
+                    Resumiendo:<br><br>
+                    <b>
+                    HTML <br>
+                    CSS <br>
+                    JavaScript - nivel medio.<br>
+                    Boostrap - nivel medio.<br>
+                    </b>
+                    <a href="#inicio" class="inicio">
+                        <i class="bi bi-house"></i>
+                    </a>
+                </p>
+            </div>
+            
+            <div id="programacion" class="programacion desarrollo-gral">
+                <h3 class="subtitulos">Programacion...</h3>
+                <p>
+                    Mi pasion por la programacion nace cuando estaba estudiando analisis de sistemas,
+                    tuve grandes profesores que enseñaron lo maravilloso que es saber programas y 
+                    que la programacion nace para dar soluciones a problemas existentes y para ayudar
+                    a que no se generen inconvenientes en el desarrollo de las tareas.<br> 
+                    Considero que todo en la vida se trata de programar y que esto aunque no nos demos 
+                    cuenta esta todas las tareas que realizamos. <br>
+                    En mis inicios comence con el viejo y querido "Pascal" que modestia aparte llegue a 
+                    manejar muy bien y a crear varias aplicaciones para quioscos, agencias de alquiler 
+                    de autos y distribuidoras. <br>
+                    Luego pase a Visual Basic, Visual Fox y por cuestiones de la vida lo deje olvidado
+                    por algun tiempo. Ya cuando retome arranque por Python, algo que me hizo querer volver
+                    con todo a programas y con la ayuda de youtube tuve muchas herramientas para seguir. 
+                    Si de base de datos y manejo de informacion se trata, no me olvido de mi viejo amigo 
+                    SQL y a pesar que hay muchos otros programas mas, con SQL aprendi sobre tablas, 
+                    relaciones, estructuras, key y consultas claro esta. <br>
+                    Tengo que mencionar que soy muy autodidacta y sigo a muchos genios profes locos de youtube
+                    que tienen la grandeza de compartir lo que saben, algo que es digno de admirar y agradecer. <br><br>
+                    Resumiendo:<br><br>
+                    <b>
+                    Python - nivel initial.<br>
+                    SQL - nivel medio.<br>
+                    </b>
+                    <a href="#inicio" class="inicio">
+                        <i class="bi bi-house"></i>
+                    </a>
+                </p>
+            </div>
+
+        </section>
+        
+        <!--ventana emergente biografia-->
+        <div class="ventana" id="vent">
+            <p>
+                Hola, una pequeñisima biografia sobre mi... <br>Tengo 45 años (creo), 
+                soy casado, tengo una hermosa nena y una maravillosa esposa que 
+                me alienta en todas mis locuras, soy Lic. en RRHH, Analista de 
+                Sistemas y apasionado por la programacion, el desarrollo web, la 
+                energia solar y el mtb. ¿Mi objetivo? tratar de dejar un mundo mejor 
+                para mi nena. El resto de mis datos personales te los paso en privado.
+            </p>
+            <a href=javascript:cerrar()>
+                <i class="bi bi-x-circle-fill"></i>
+            </a>
+        </div>
+
+    <!--scrip para ventana emergente biografia-->   
+    <script>
+        function abrir(){
+            document.getElementById("vent").style.display="block";
+        }
+        function cerrar(){
+            document.getElementById("vent").style.display="none";
+        }
+
+    </script>
+        
+    </body>
+</html>
